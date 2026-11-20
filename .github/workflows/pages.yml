@@ -18,44 +18,15 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
       - uses: actions/configure-pages@v5
-      - name: Preparar catálogo de demonstração
-        run: |
-          src=revenda-master-servidor/revenda-master/frontend
-          mkdir -p pages/assets
-          cp "$src/index.html" "$src/veiculo.html" pages/
-          cp -r "$src/assets/." pages/assets/
-          sed -i 's|"/assets/|"./assets/|g; s|href="/"|href="./"|g; /rm.js/a <script src="./assets/js/demo-catalogo.js"></script>' pages/*.html
-          sed -i 's@urlVoltar || "/"@urlVoltar || "./"@g' pages/assets/js/veiculo.js
-          touch pages/.nojekyll
-          cat > pages/assets/js/demo-catalogo.js <<'EOF'
-          (() => {
-            const demo = {
-              id: '1', brand: 'Chevrolet', model: 'Onix', year: 2020,
-              color: 'Branco', transmission: 'Manual', available: true,
-              description: 'Veículo fictício para demonstração do catálogo.',
-              photo: './assets/img/poster-onix.jpg',
-              photos: [{ url: './assets/img/poster-onix.jpg' }], sections: []
-            };
-            const metadata = {
-              brands: [demo.brand], models_by_brand: { [demo.brand]: [demo.model] },
-              years: [demo.year], colors: [demo.color], transmissions: [demo.transmission]
-            };
-            RM.config.linkVeiculo = id => './veiculo.html?id=' + encodeURIComponent(id);
-            RM.api = {
-              meta: async () => metadata,
-              vehicles: async filters => {
-                const matches = Object.entries(filters || {}).every(([key, value]) =>
-                  !value || String(demo[key]) === String(value));
-                return { items: matches ? [demo] : [], count: Number(matches) };
-              },
-              vehicle: async id => {
-                if (id !== demo.id) throw new Error('Veículo não encontrado.');
-                return demo;
-              }
-            };
-          })();
-          EOF
+      - name: Gerar catálogo
+        env:
+          WHATSAPP_NUMBER: ${{ vars.STORE_WHATSAPP_NUMBER }}
+          STORE_ADDRESS: ${{ vars.STORE_ADDRESS }}
+        run: node revenda-master-servidor/revenda-master/build-pages.mjs pages
       - uses: actions/upload-pages-artifact@v3
         with:
           path: pages

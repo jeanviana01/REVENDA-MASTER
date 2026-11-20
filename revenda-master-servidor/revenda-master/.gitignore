@@ -20,3 +20,8 @@ venv/
 # Outros
 .DS_Store
 *.log
+
+# Node.js
+!.env.node.example
+node_modules/
+data/

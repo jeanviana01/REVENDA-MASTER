@@ -1,5 +1,9 @@
 # Revenda Master
 
+[Catálogo no GitHub Pages](https://jeanviana01.github.io/REVENDA-MASTER/) · [Aplicação completa em Node.js](revenda-master-servidor/revenda-master/NODE.md)
+
+As instruções abaixo descrevem a versão original em Flask, preservada para referência.
+
 Site de uma revenda de carros: catálogo público com busca e página de cada veículo, e uma **área de administrador protegida por login** para
 cadastrar, editar e remover veículos, fotos e descrições. Os dados ficam em um banco SQLite no servidor e as fotos em uma pasta do servidor.
 
