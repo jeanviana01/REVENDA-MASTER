@@ -26,11 +26,12 @@ jobs:
           cp "$src/index.html" "$src/veiculo.html" pages/
           cp -r "$src/assets/." pages/assets/
           sed -i 's|"/assets/|"./assets/|g; s|href="/"|href="./"|g; /rm.js/a <script src="./assets/js/demo.js"></script>' pages/*.html
+          sed -i 's@urlVoltar || "/"@urlVoltar || "./"@g' pages/assets/js/veiculo.js
           touch pages/.nojekyll
           cat > pages/assets/js/demo.js <<'EOF'
           (() => {
             const demo = {
-              id: 'onix-demo', brand: 'Chevrolet', model: 'Onix', year: 2020,
+              id: '1', brand: 'Chevrolet', model: 'Onix', year: 2020,
               color: 'Branco', transmission: 'Manual', available: true,
               description: 'Veículo fictício para demonstração do catálogo.',
               photo: './assets/img/poster-onix.jpg',
