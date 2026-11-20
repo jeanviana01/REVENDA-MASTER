@@ -1,0 +1,28 @@
+/* Revenda Master — página de detalhes do veículo (veiculo.html). Base visual vem de site.css. */
+.vei { width: min(1040px, 100% - 2rem); margin: 0 auto; padding: clamp(1.5rem, 5vw, 3rem) 0 4rem; }
+.vei-voltar { display: inline-block; color: var(--texto-suave); text-decoration: none; letter-spacing: .14em; text-transform: uppercase; font-size: .75rem; margin-bottom: 1.2rem; }
+.vei-voltar:hover { color: var(--ouro-claro); }
+.vei-topo { text-align: center; }
+.vei-cat { color: var(--ouro); letter-spacing: .2em; text-transform: uppercase; font-size: .72rem; }
+.vei-titulo { font-family: var(--display); font-weight: 500; font-style: italic; color: var(--ouro-claro); font-size: clamp(2.2rem, 7vw, 4.2rem); line-height: 1.08; margin: .3rem 0 .7rem; }
+.vei-titulo span { color: var(--ouro); }
+.vei-descricao { max-width: 40rem; margin: .8rem auto 0; color: var(--texto-suave); line-height: 1.5; }
+.vei-vitrine { margin: 1.5rem auto 0; max-width: 532px; padding-top: 1rem; background: radial-gradient(ellipse at 50% 85%, rgba(201,169,110,.16), transparent 65%); }
+.vei-vitrine img { display: block; width: 100%; height: auto; filter: drop-shadow(0 22px 22px rgba(0,0,0,.55)); }
+.vei-fichas { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .8rem; margin: 1.8rem 0; }
+.vei-ficha { padding: .9rem 1rem; border: 1px solid var(--linha); border-radius: 2px; background: rgba(8,8,10,.62); }
+.vei-ficha span { display: block; color: var(--ouro); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: .25rem; }
+.vei-ficha strong { font-weight: 400; font-size: 1.1rem; }
+.vei-blocos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.vei-bloco { padding: 1.3rem 1.4rem; background: rgba(8,8,10,.62); border: 1px solid var(--linha); border-radius: 2px; }
+.vei-bloco h2 { font-family: var(--display); font-weight: 500; font-style: italic; color: var(--ouro-claro); font-size: 1.8rem; margin-bottom: .6rem; }
+.vei-bloco ul { padding-left: 1.1rem; display: grid; gap: .45rem; }
+.vei-bloco li { line-height: 1.55; color: #dfe1e5; font-weight: 300; }
+.vei-bloco li::marker { color: var(--ouro); }
+.vei-secao { font-family: var(--display); font-weight: 500; font-style: italic; color: var(--ouro-claro); font-size: 2rem; margin: 2.4rem 0 .8rem; }
+.vei-galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: .8rem; }
+.vei-galeria figure { aspect-ratio: 4/3; border: 1px solid var(--linha); border-radius: 2px; background: rgba(255,255,255,.03); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.vei-galeria img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.vei-vazio { color: var(--texto-suave); }
+.vei-acoes { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2.4rem; }
+@media (max-width: 640px) { .vei-acoes .btn { flex: 1 1 100%; } }

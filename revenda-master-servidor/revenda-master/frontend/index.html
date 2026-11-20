@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revenda Master | Procurou, achou!</title>
+<meta name="description" content="Revenda Master: encontre seu próximo carro por fabricante, modelo, ano, cor e transmissão. Se não tivermos, a gente encomenda.">
+<meta name="theme-color" content="#050506">
+<meta property="og:title" content="Revenda Master | Procurou, achou!">
+<meta property="og:description" content="Encontre seu próximo carro por fabricante, modelo, ano, cor e transmissão.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<main class="pagina" id="home">
+
+  <header class="marca">
+    <h1 class="logo">
+      <img src="/assets/img/logo-revenda-master.png" alt="Revenda Master" width="1800" height="840">
+      <span class="logo-luz" aria-hidden="true"></span>
+    </h1>
+
+    <div class="video-faixa" aria-hidden="true">
+      <video id="video-onix" src="/assets/video/video-onix.mp4" poster="/assets/img/poster-onix.jpg" autoplay muted loop playsinline preload="auto" disablepictureinpicture></video>
+    </div>
+
+    <p class="frase">Procurou, achou!</p>
+    <p class="subfrase">O carro que você imaginou já está esperando por você. E se ainda não chegou, a gente traz.</p>
+
+    <div class="acoes">
+      <button class="btn" id="btn-fabricantes" type="button" aria-expanded="false" aria-controls="painel-fabricantes">Fabricantes</button>
+      <button class="btn" id="btn-buscar" type="button" aria-expanded="false" aria-controls="painel-buscar">Buscar</button>
+    </div>
+  </header>
+  <noscript><p class="estado erro">Este site precisa de JavaScript para mostrar o catálogo.</p></noscript>
+
+  <!-- Painel Fabricantes -->
+  <section class="painel" id="painel-fabricantes" hidden aria-labelledby="h-fab">
+    <h2 id="h-fab">Fabricantes</h2>
+    <div class="marcas" id="marcas"></div>
+    <div class="lista-marca" id="lista-marca" aria-live="polite"></div>
+  </section>
+
+  <!-- Painel Buscar -->
+  <section class="painel" id="painel-buscar" hidden aria-labelledby="h-busca">
+    <h2 id="h-busca">Qual carro você procura?</h2>
+    <form id="form-busca" novalidate>
+      <div class="campos">
+        <div class="campo"><label for="sel-marca">Fabricante</label><select id="sel-marca"></select></div>
+        <div class="campo"><label for="sel-modelo">Modelo</label><select id="sel-modelo"></select></div>
+        <div class="campo"><label for="sel-ano">Ano</label><select id="sel-ano"></select></div>
+        <div class="campo"><label for="sel-cor">Cor</label><select id="sel-cor"></select></div>
+        <div class="campo"><label for="sel-cambio">Transmissão</label><select id="sel-cambio"></select></div>
+      </div>
+      <div class="linha-busca">
+        <button type="submit" class="btn cheio">Buscar carro</button>
+      </div>
+    </form>
+    <div class="resultado" id="resultado" aria-live="polite"></div>
+  </section>
+
+  <!-- Contato -->
+  <section class="contato" aria-labelledby="h-contato">
+    <div class="mapa">
+      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mapa ilustrativo da localização da loja">
+        <defs><linearGradient id="pinoOuro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1e2bb"/><stop offset="1" stop-color="#b8945a"/></linearGradient></defs>
+        <rect width="400" height="300" fill="#121317"/>
+        <path d="M0 292 Q120 248 205 284 T400 268 V300 H0Z" fill="#0e1b25"/>
+        <rect x="168" y="146" width="72" height="56" rx="4" fill="#15221a"/>
+        <path d="M0 60H400M0 130H400M0 210H400M0 262H400M70 0V300M150 0V300M250 0V300M340 0V300" stroke="#23262c" stroke-width="10" fill="none"/>
+        <path d="M0 252L400 38" stroke="#30333b" stroke-width="15" fill="none"/>
+        <path d="M0 252L400 38" stroke="#c9a96e" stroke-opacity=".4" stroke-width="1" stroke-dasharray="6 6" fill="none"/>
+        <g font-family="Jost, sans-serif" font-size="8" letter-spacing="2" fill="#6b6f78"><text x="18" y="56">AV. DOS MASTERS</text><text x="262" y="206">R. DO COMÉRCIO</text><text x="174" y="178">PRAÇA</text></g>
+        <g transform="translate(252 138)">
+          <circle r="26" fill="#c9a96e" fill-opacity=".14"/><circle r="13" fill="#c9a96e" fill-opacity=".18"/>
+          <path d="M0 0C-16-18-18-32-18-36a18 18 0 1 1 36 0c0 4-2 18-18 36Z" transform="translate(0 -2)" fill="url(#pinoOuro)"/>
+          <circle cx="0" cy="-38" r="6.5" fill="#121317"/>
+        </g>
+      </svg>
+    </div>
+    <div class="contato-info">
+      <h2 id="h-contato">Visite a loja</h2>
+      <ul class="contato-lista">
+        <li><span class="rot">Endereço</span><span class="val">Av. Imperial, 1200 · Centro<br>Cidade Modelo – RS</span></li>
+        <li><span class="rot">Horário</span><span class="val">Seg a Sex, 9h às 18h<br>Sáb, 9h às 13h</span></li>
+      </ul>
+      <div class="contato-acoes">
+        <a class="btn cheio" id="btn-zap" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>Fale conosco</a>
+        <a class="btn" id="btn-maps" href="#" target="_blank" rel="noopener">Google Maps</a>
+      </div>
+    </div>
+  </section>
+  <a class="zap-flutuante" id="zap-flutuante" href="#" target="_blank" rel="noopener" aria-label="Falar com a loja pelo WhatsApp" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg></a>
+
+  <footer class="rodape">© Revenda Master. Site de demonstração.</footer>
+</main>
+
+<script src="/assets/js/rm.js"></script>
+<script src="/assets/js/video.js"></script>
+<script src="/assets/js/home.js"></script>
+</body>
+</html>

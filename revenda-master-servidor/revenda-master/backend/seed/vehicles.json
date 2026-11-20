@@ -1,0 +1,335 @@
+[
+  {
+    "brand": "Volkswagen",
+    "model": "Polo Highline",
+    "version": "1.0 200 TSI",
+    "year": 2024,
+    "year_label": "2023/2024",
+    "color": "Vermelho",
+    "transmission": "Automático",
+    "description": "",
+    "available": true,
+    "sections": [
+      {
+        "title": "Câmbio",
+        "items": [
+          "Automático de 6 marchas, com trocas no volante (paddle shifts)"
+        ]
+      },
+      {
+        "title": "Interior e conforto",
+        "items": [
+          "Bancos revestidos em couro sintético com costuras aparentes",
+          "Painel 100% digital (Active Info Display de 10,25\")",
+          "Ar-condicionado digital Climatronic com comandos touch",
+          "Carregador de celular por indução",
+          "Chave presencial com partida por botão"
+        ]
+      },
+      {
+        "title": "Multimídia e tecnologia",
+        "items": [
+          "Central VW Play de 10,1\" com Apple CarPlay e Android Auto sem fio",
+          "Câmera de ré",
+          "Sensores de estacionamento dianteiros e traseiros"
+        ]
+      }
+    ],
+    "photos": [
+      "polo-highline.png"
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Virtus Exclusive",
+    "version": "1.4 250 TSI",
+    "year": 2024,
+    "year_label": "2024/2024",
+    "color": "Cinza",
+    "transmission": "Automático",
+    "description": "",
+    "available": true,
+    "sections": [
+      {
+        "title": "Câmbio",
+        "items": [
+          "Automático de 6 marchas"
+        ]
+      },
+      {
+        "title": "Interior e conforto",
+        "items": [
+          "Acabamento superior, com faixa central do painel revestida em couro macio",
+          "Bancos esportivos em couro com emblema “Exclusive”",
+          "Painel digital de 10,25\"",
+          "Iluminação ambiente em LED",
+          "Saídas de ar-condicionado para o banco traseiro",
+          "Porta-malas de 521 litros"
+        ]
+      },
+      {
+        "title": "Multimídia e tecnologia",
+        "items": [
+          "Central VW Play de 10,1\" com espelhamento sem fio",
+          "Sistema de som de alta fidelidade",
+          "Piloto automático adaptativo (ACC)",
+          "Frenagem automática de emergência"
+        ]
+      }
+    ],
+    "photos": [
+      "virtus-exclusive.png"
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "T-Cross Comfortline",
+    "version": "1.0 200 TSI",
+    "year": 2023,
+    "year_label": "2022/2023",
+    "color": "Cinza",
+    "transmission": "Automático",
+    "description": "",
+    "available": true,
+    "sections": [
+      {
+        "title": "Câmbio",
+        "items": [
+          "Automático de 6 marchas"
+        ]
+      },
+      {
+        "title": "Interior e conforto",
+        "items": [
+          "Bancos em tecido de alta densidade com detalhes em couro (opcional de couro integral)",
+          "Volante multifuncional revestido em couro",
+          "Painel digital de 8\"",
+          "Descansos de braço central dianteiro com porta-objetos",
+          "Excelente espaço interno para as pernas"
+        ]
+      },
+      {
+        "title": "Multimídia e tecnologia",
+        "items": [
+          "Central VW Play de 10,1\" integrada ao painel",
+          "Bluetooth",
+          "Entradas USB-C iluminadas",
+          "Câmera de ré"
+        ]
+      }
+    ],
+    "photos": [
+      "t-cross-comfortline.png"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Onix LT",
+    "version": "",
+    "year": 2020,
+    "year_label": "",
+    "color": "Azul",
+    "transmission": "Manual",
+    "description": "Hatch compacto · Motor 1.0 Flex · Câmbio manual de 6 marchas.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "chevrolet-onix-lt.png"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Tracker LT",
+    "version": "",
+    "year": 2023,
+    "year_label": "",
+    "color": "Vermelho",
+    "transmission": "Automático",
+    "description": "SUV compacto · Motor 1.0 Turbo Flex · Câmbio automático de 6 marchas.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "chevrolet-tracker-lt.png"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Onix Premier",
+    "version": "",
+    "year": 2025,
+    "year_label": "",
+    "color": "Branco",
+    "transmission": "Automático",
+    "description": "Hatch premium · Motor 1.0 Turbo Flex · Câmbio automático de 6 marchas.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "chevrolet-onix-premier.png"
+    ]
+  },
+  {
+    "brand": "Jeep",
+    "model": "Renegade Longitude",
+    "version": "",
+    "year": 2020,
+    "year_label": "",
+    "color": "Cinza",
+    "transmission": "Automático",
+    "description": "SUV compacto · Motor 1.8 Flex · Câmbio automático de 6 marchas.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "jeep-renegade-longitude-2020.png"
+    ]
+  },
+  {
+    "brand": "Jeep",
+    "model": "Renegade Longitude",
+    "version": "",
+    "year": 2023,
+    "year_label": "",
+    "color": "Vermelho",
+    "transmission": "Automático",
+    "description": "SUV compacto · Motor 1.3 Turbo Flex · Câmbio automático de 6 marchas.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "jeep-renegade-longitude-2023.png"
+    ]
+  },
+  {
+    "brand": "Renault",
+    "model": "Kwid Outsider",
+    "version": "",
+    "year": 2020,
+    "year_label": "",
+    "color": "Prata",
+    "transmission": "Manual",
+    "description": "Hatch compacto · Motor 1.0 Flex · Câmbio manual de 5 marchas.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "renault-kwid-outsider.png"
+    ]
+  },
+  {
+    "brand": "Renault",
+    "model": "Duster Iconic",
+    "version": "",
+    "year": 2024,
+    "year_label": "",
+    "color": "Preto",
+    "transmission": "Automático",
+    "description": "SUV médio · Motor 1.6 Flex · Câmbio automático CVT.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "renault-duster-iconic.png"
+    ]
+  },
+  {
+    "brand": "Renault",
+    "model": "Kardian Première Edition",
+    "version": "",
+    "year": 2025,
+    "year_label": "",
+    "color": "Preto",
+    "transmission": "Automático",
+    "description": "SUV compacto · Motor 1.0 Turbo Flex · Câmbio automatizado EDC de 6 marchas.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "renault-kardian.png"
+    ]
+  },
+  {
+    "brand": "Fiat",
+    "model": "Argo Drive",
+    "version": "",
+    "year": 2020,
+    "year_label": "",
+    "color": "Preto",
+    "transmission": "Manual",
+    "description": "Hatch compacto · Motor 1.0 Firefly Flex · Câmbio manual de 5 marchas.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "fiat-argo-drive.png"
+    ]
+  },
+  {
+    "brand": "Fiat",
+    "model": "Cronos Drive",
+    "version": "",
+    "year": 2023,
+    "year_label": "",
+    "color": "Prata",
+    "transmission": "Automático",
+    "description": "Sedã compacto · Motor 1.3 Firefly Flex · Câmbio automático CVT.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "fiat-cronos-drive.png"
+    ]
+  },
+  {
+    "brand": "Fiat",
+    "model": "Pulse Impetus",
+    "version": "",
+    "year": 2025,
+    "year_label": "",
+    "color": "Cinza",
+    "transmission": "Automático",
+    "description": "SUV compacto · Motor 1.0 Turbo Flex · Câmbio automático CVT.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "fiat-pulse-impetus.png"
+    ]
+  },
+  {
+    "brand": "Hyundai",
+    "model": "HB20 Comfort Plus",
+    "version": "",
+    "year": 2025,
+    "year_label": "",
+    "color": "Azul",
+    "transmission": "Manual",
+    "description": "Hatch · Motor 1.0 Flex · Câmbio manual.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "hyundai-hb20-comfort-plus.png"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla XEi",
+    "version": "",
+    "year": 2022,
+    "year_label": "",
+    "color": "Azul",
+    "transmission": "Automático",
+    "description": "Sedã · Motor 2.0 Flex · Câmbio automático CVT.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "toyota-corolla-xei.png"
+    ]
+  },
+  {
+    "brand": "Honda",
+    "model": "Civic EXL",
+    "version": "",
+    "year": 2022,
+    "year_label": "",
+    "color": "Branco",
+    "transmission": "Automático",
+    "description": "Sedã · Motor 2.0 Flex · Câmbio automático CVT.",
+    "available": true,
+    "sections": [],
+    "photos": [
+      "honda-civic-exl.png"
+    ]
+  }
+]

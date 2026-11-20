@@ -1,0 +1,22 @@
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+
+# Dados gerados em execução
+instance/
+uploads/
+logs/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Outros
+.DS_Store
+*.log

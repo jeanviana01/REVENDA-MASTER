@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administrador | Revenda Master</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#050506">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body>
+<main class="admin-area" id="admin-root">
+  <div class="adm-wrap">
+    <a class="adm-voltar" href="/">‹ Voltar ao site</a>
+    <h1 class="adm-titulo">Área do administrador</h1>
+
+    <section id="adm-login" class="painel adm-card" hidden aria-labelledby="h-login">
+      <h2 id="h-login">Entrar</h2>
+      <form id="form-login" novalidate>
+        <div class="campos">
+          <div class="campo"><label for="adm-user">Usuário</label><input id="adm-user" type="text" autocomplete="username" maxlength="64" required></div>
+          <div class="campo"><label for="adm-pass">Senha</label><input id="adm-pass" type="password" autocomplete="current-password" maxlength="128" required></div>
+        </div>
+        <div class="adm-linha"><button class="btn cheio" type="submit">Entrar</button></div>
+        <p class="adm-msg" id="msg-login" role="alert"></p>
+      </form>
+    </section>
+
+    <div id="adm-painel" hidden>
+      <div class="adm-topo"><span>Logado como <strong id="adm-nome"></strong></span><button class="btn peq" id="btn-sair" type="button">Sair</button></div>
+
+      <section class="painel adm-card" aria-labelledby="h-form">
+        <h2 id="h-form">Adicionar veículo</h2>
+        <form id="form-veiculo" novalidate>
+          <div class="campos">
+            <div class="campo"><label for="f-marca">Fabricante</label><select id="f-marca" required></select></div>
+            <div class="campo"><label for="f-modelo">Modelo</label><input id="f-modelo" type="text" maxlength="80" list="dl-modelos" placeholder="Ex.: HB20 Comfort Plus" required><datalist id="dl-modelos"></datalist></div>
+            <div class="campo"><label for="f-versao">Versão / motor (opcional)</label><input id="f-versao" type="text" maxlength="60" placeholder="Ex.: 1.0 200 TSI"></div>
+            <div class="campo"><label for="f-ano">Ano</label><input id="f-ano" type="number" min="1980" max="2100" placeholder="Ex.: 2025" required></div>
+            <div class="campo"><label for="f-rotulo-ano">Ano exibido (opcional)</label><input id="f-rotulo-ano" type="text" maxlength="20" placeholder="Ex.: 2023/2024"></div>
+            <div class="campo"><label for="f-cor">Cor</label><input id="f-cor" type="text" maxlength="30" list="dl-cores" placeholder="Ex.: Preto"><datalist id="dl-cores"></datalist></div>
+            <div class="campo"><label for="f-cambio">Transmissão</label><select id="f-cambio" required></select></div>
+            <div class="campo"><label for="f-disp">Situação</label><select id="f-disp"><option value="1">Disponível para venda</option><option value="0">Indisponível</option></select></div>
+            <div class="campo larga"><label for="f-desc">Descrição curta</label><textarea id="f-desc" maxlength="300" placeholder="Ex.: Hatch compacto · Motor 1.0 Flex · Câmbio manual de 6 marchas."></textarea></div>
+            <div class="campo larga"><label for="f-detalhes">Detalhes (opcional) — use “# Título” para cada bloco e uma linha por item</label><textarea id="f-detalhes" rows="6" placeholder="# Câmbio&#10;Automático de 6 marchas&#10;# Interior e conforto&#10;Bancos em couro"></textarea></div>
+            <div class="campo larga" id="bloco-fotos-atuais" hidden><label>Fotos atuais (a primeira é a principal)</label><div class="adm-fotos" id="fotos-atuais"></div></div>
+            <div class="campo larga"><label for="f-fotos">Adicionar fotos (PNG, JPG ou WebP, até 5 MB cada)</label><input id="f-fotos" type="file" accept="image/png,image/jpeg,image/webp" multiple></div>
+          </div>
+          <div class="adm-linha">
+            <button class="btn cheio" id="btn-salvar" type="submit">Salvar veículo</button>
+            <button class="btn peq" id="btn-cancelar" type="button" hidden>Cancelar edição</button>
+          </div>
+          <p class="adm-msg" id="msg-form" role="alert"></p>
+        </form>
+      </section>
+
+      <section class="painel adm-card" aria-labelledby="h-lista">
+        <h2 id="h-lista">Veículos cadastrados (<span id="adm-qtd">0</span>)</h2>
+        <div id="adm-lista"></div>
+      </section>
+
+      <section class="painel adm-card" aria-labelledby="h-senha">
+        <h2 id="h-senha">Alterar senha</h2>
+        <form id="form-senha" novalidate>
+          <div class="campos">
+            <div class="campo"><label for="pw-atual">Senha atual</label><input id="pw-atual" type="password" autocomplete="current-password" maxlength="128"></div>
+            <div class="campo"><label for="pw-nova">Nova senha (mín. 10 caracteres)</label><input id="pw-nova" type="password" autocomplete="new-password" maxlength="128"></div>
+            <div class="campo"><label for="pw-conf">Repita a nova senha</label><input id="pw-conf" type="password" autocomplete="new-password" maxlength="128"></div>
+          </div>
+          <div class="adm-linha"><button class="btn peq" type="submit">Salvar nova senha</button></div>
+          <p class="adm-msg" id="msg-senha" role="alert"></p>
+        </form>
+      </section>
+    </div>
+    <p class="adm-msg" id="msg-geral" role="alert"></p>
+  </div>
+</main>
+<noscript><p class="estado erro">A área do administrador precisa de JavaScript.</p></noscript>
+<script src="/assets/js/rm.js"></script>
+<script src="/assets/js/admin.js"></script>
+</body>
+</html>

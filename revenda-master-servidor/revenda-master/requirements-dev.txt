@@ -1,0 +1,2 @@
+-r requirements.txt
+playwright>=1.40    # só para os testes E2E (depois: python -m playwright install chromium)
