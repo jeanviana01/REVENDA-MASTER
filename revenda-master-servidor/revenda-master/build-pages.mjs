@@ -32,7 +32,7 @@ for (const name of ['index.html', 'veiculo.html']) {
   const html = (await readFile(resolve(root, 'frontend', name), 'utf8'))
     .replaceAll('"/assets/', '"./assets/')
     .replaceAll('href="/"', 'href="./"')
-    .replace('<script src="./assets/js/rm.js"></script>', '<script src="./assets/js/rm.js"></script>\n<script src="./assets/js/catalogo-pages.js"></script>');
+    .replace('<script src="./assets/js/rm.js"></script>', '<script src="./assets/js/rm.js"></script>\n<script src="./assets/js/catalogo-pages.js?v=2"></script>');
   await writeFile(resolve(output, name), html);
 }
 const detailPath = asset('js/veiculo.js');
@@ -40,6 +40,7 @@ await writeFile(detailPath, (await readFile(detailPath, 'utf8')).replace('urlVol
 await writeFile(asset('js/catalogo-pages.js'), `(() => {
   const vehicles = ${JSON.stringify(vehicles)};
   const metadata = ${JSON.stringify(metadata)};
+  RM.config.logo = name => './assets/img/' + encodeURIComponent(name) + '.png';
   RM.config.linkVeiculo = id => './veiculo.html?id=' + encodeURIComponent(id);
   RM.api = {
     meta: async () => metadata,
