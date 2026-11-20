@@ -1,6 +1,6 @@
 # Revenda Master
 
-[Catálogo no GitHub Pages](https://jeanviana01.github.io/REVENDA-MASTER/) · [Aplicação completa em Node.js](revenda-master-servidor/revenda-master/NODE.md)
+[Catálogo no GitHub Pages](https://jeanviana01.github.io/REVENDA-MASTER/?catalogo=completo) · [Aplicação completa em Node.js](revenda-master-servidor/revenda-master/NODE.md)
 
 As instruções abaixo descrevem a versão original em Flask, preservada para referência.
 
